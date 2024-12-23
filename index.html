@@ -25,14 +25,14 @@
     <nav class="navbar">
       <div class="nav-container">
         <div class="logo">
-          <img src="logo.png" alt="فيوتشر بيك" />
+          <!-- <img src="logo.png" alt="فيوتشر بيك" /> -->
           <span>فيوتشر بيك</span>
         </div>
         <div class="nav-links">
           <a href="index.html" class="active">الرئيسية</a>
           <a href="about.html">عن النظام</a>
-          <a href="products.html" >منتجاتنا</a>
-          <a href="services.html" >خدماتنا</a>
+          <a href="products.html">منتجاتنا</a>
+          <a href="services.html">خدماتنا</a>
           <a href="contact.html">اتصل بنا</a>
         </div>
         <button class="mobile-menu">
@@ -66,7 +66,7 @@
               </p>
             </div>
             <div class="about-image">
-              <img src="about-image.jpg" alt="نظام البناء الميكانيكي" />
+              <!-- <img src="about-image.jpg" alt="نظام البناء الميكانيكي" /> -->
             </div>
           </div>
         </div>
@@ -281,25 +281,27 @@
       const mobileMenu = document.querySelector(".mobile-menu");
       const navLinks = document.querySelector(".nav-links");
       const body = document.querySelector("body");
-  
+
       mobileMenu.addEventListener("click", () => {
-          navLinks.classList.toggle("active");
-          body.style.overflow = navLinks.classList.contains("active") ? "hidden" : "auto";
+        navLinks.classList.toggle("active");
+        body.style.overflow = navLinks.classList.contains("active")
+          ? "hidden"
+          : "auto";
       });
-  
+
       document.querySelectorAll(".nav-links a").forEach((link) => {
-          link.addEventListener("click", () => {
-              navLinks.classList.remove("active");
-              body.style.overflow = "auto";
-          });
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("active");
+          body.style.overflow = "auto";
+        });
       });
-  
+
       document.addEventListener("click", (e) => {
-          if (!navLinks.contains(e.target) && !mobileMenu.contains(e.target)) {
-              navLinks.classList.remove("active");
-              body.style.overflow = "auto";
-          }
+        if (!navLinks.contains(e.target) && !mobileMenu.contains(e.target)) {
+          navLinks.classList.remove("active");
+          body.style.overflow = "auto";
+        }
       });
-  </script>
+    </script>
   </body>
 </html>
